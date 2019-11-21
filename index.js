@@ -13,5 +13,7 @@ app.use('/', (request, response) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Visit port loaclhost:${PORT}`);
+  console.log(`Visit port localhost:${PORT}`);
 });
+
+export default app;
