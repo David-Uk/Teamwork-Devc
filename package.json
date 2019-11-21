@@ -1,0 +1,34 @@
+{
+  "name": "teamwork-devc",
+  "version": "1.0.0",
+  "description": "Chat app for co workers in an organization",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --fix **/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-Uk/Teamwork-Devc.git"
+  },
+  "author": "David Ukelere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David-Uk/Teamwork-Devc/issues"
+  },
+  "homepage": "https://github.com/David-Uk/Teamwork-Devc#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "mocha": "^6.2.2"
+  }
+}
