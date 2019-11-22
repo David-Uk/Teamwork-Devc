@@ -6,17 +6,12 @@ import JWT from '../middleware/jsonWebToken';
 
 const storage = Multer.memoryStorage();
 const upload = Multer({
-  storage,
+	storage,
 }).single('image');
 
 const gifRouter = Router();
 
-gifRouter.post(
-  '/gifs',
-  JWT.authenticate,
-  upload,
-  Cloudinary.upload,
-  GifController.createGif,
-);
+gifRouter.post('/gifs', JWT.authenticate, upload, Cloudinary.upload, GifController.createGif);
+gifRouter.delete('/gifs/:id', JWT.authenticate, GifController.deleteGif);
 
 export default gifRouter;
