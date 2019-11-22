@@ -18,13 +18,6 @@ app.use(cors());
 
 app.use('/api/v1', routers);
 
-app.use('/', (request, response) => {
-  response.status(404).send({
-    status: 404,
-    error: 'Not Found !',
-  });
-});
-
 app.listen(PORT, () => {
   console.log(`Visit localhost:${PORT}`);
 });
