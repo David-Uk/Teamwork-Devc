@@ -6,7 +6,7 @@ import JWT from '../middleware/jsonWebToken';
 
 const storage = Multer.memoryStorage();
 const upload = Multer({
-	storage,
+  storage,
 }).single('image');
 
 const gifRouter = Router();
