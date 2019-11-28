@@ -27,7 +27,6 @@ describe('#Handle gif posts', () => {
       })
       .catch((error) => done(error));
   });
-
   it('Should post a gif file', (done) => {
     chai
       .request(app)

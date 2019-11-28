@@ -1,9 +1,9 @@
-import { it, describe } from 'mocha';
+import { it, describe, before } from 'mocha';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import fs from 'fs';
 import path from 'path';
-import app from '../app';
+import app from '../../index';
 
 const url = '/api/v1/';
 chai.use(chaiHttp);
@@ -53,7 +53,7 @@ describe('#Should handle employee comments', () => {
           .field('title', 'gif to comment on')
           .attach(
             'image',
-            fs.readFileSync(path.resolve(__dirname, './image/giphy.gif')),
+            fs.readFileSync(path.resolve(__dirname, './image/img1.gif')),
             'giphy.gif',
           )
           .then((response) => {
