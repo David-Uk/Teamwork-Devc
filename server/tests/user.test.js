@@ -9,19 +9,6 @@ const url = '/api/v1/auth';
 
 describe('Should ensure that user endpoints meet specs', () => {
   describe('Should handle sign up', () => {
-    it('should reject empty fields', () => {
-      const userData = {};
-      chai
-        .request(app)
-        .post(`${url}/create-user`)
-        .send(userData)
-        .end((request, response) => {
-          response.body.should.have.property('status')
-            .equal(422);
-        });
-      done();
-    });
-
     it('should create new user', (done) => {
       chai
         .request(app)
@@ -46,7 +33,7 @@ describe('Should ensure that user endpoints meet specs', () => {
       const userData = { ...user[1] };
       chai.request(app)
         .post(`${url}/create-user`)
-        .send(data)
+        .send(userData)
         .end((request, response) => {
           response.body.should.have.property('status')
             .equal(409);

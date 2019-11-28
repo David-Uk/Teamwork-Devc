@@ -2,11 +2,9 @@
 import { describe } from 'mocha';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
-import chaiThings from 'chai-things';
 import app from '../../index';
 
 chai.should();
-chai.use(chaiThings);
 chai.use(chaiHttp);
 
 describe('#Endpoint prefix', () => {

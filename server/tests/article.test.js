@@ -1,4 +1,4 @@
-import { describe, it } from 'mocha';
+import { describe, it, before } from 'mocha';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../../index';
@@ -49,7 +49,7 @@ describe('#Should handle articles', () => {
       .catch((error) => done(error));
   });
 
-  it('Should edit enable users edit their articles', (done) => {
+  it('Should enable users edit their articles', (done) => {
     chai
       .request(app)
       .patch(`${url}/articles/${article.id}`)
